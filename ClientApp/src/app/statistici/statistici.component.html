@@ -1,0 +1,20 @@
+<button *ngIf="sod=='dreptaci'" class="statistici-mare-sting" [routerLink]="['statistici']" style="padding:0;">
+  <img src="/assets/img/statistici.svg" alt="buton statistici">
+  <div class="numcop" style="color:lime; left:50%; transform:translate(-50%)">{{sirNumarCopaci}}</div>
+</button>
+<button *ngIf="sod=='dreptaci'" class="statistici-mic-sting" [routerLink]="['statistici']" style="padding:0;">
+  <img src="/assets/img/statistici.svg" alt="buton statistici">
+  <div class="numcop" style="color: lime; left: 50%; transform: translate(-50%,.5mm);">{{sirNumarCopaci}}</div>
+</button>
+
+<button *ngIf="sod=='stîngaci'" class="statistici-mare-drept" [routerLink]="['statistici']" style="padding:0;">
+  <img src="/assets/img/statistici.svg" alt="buton statistici">
+  <div class="numcop" style="color: lime; left: 50%; transform: translate(-50%)">{{sirNumarCopaci}}</div>
+</button>
+<button *ngIf="sod=='stîngaci'" class="statistici-mic-drept" [routerLink]="['statistici']" style="padding:0;">
+  <img src="/assets/img/statistici.svg" alt="buton statistici">
+  <div class="numcop" style="color: lime; left: 50%; transform: translate(-50%,.5mm);">{{sirNumarCopaci}}</div>
+</button>
+<!--
+<app-zstatistici></app-zstatistici>
+  -->

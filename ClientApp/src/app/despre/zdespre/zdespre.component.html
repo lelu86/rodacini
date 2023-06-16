@@ -1,0 +1,72 @@
+
+<div class="toc" style="margin: 0; border: 0; padding:0;">
+  <div class="usa">
+    <h2 style="text-align: center; padding-top: 6mm; pointer-events: none;">Rodăcini</h2>
+    <img src="/assets/img/sigla.svg"
+         style="width: 30mm; border-radius: 50%; border: .5mm solid black;" />
+    <h4>România prinde rădăcini!</h4>
+    <p style="padding-left: 3mm; padding-right: 3mm;">
+      Acest proiect e rodul colaborării dintre un grup de entuziaști și Romsilva. Încurajăm exploatările raționale și oprirea lor definitivă pe suprafețe cît mai întinse. 98% din copacii plantați de Romsilva trăiesc peste un secol.
+    </p>
+    <h4>Cum folosesc?</h4>
+    <p style="padding-left: 3mm; padding-right: 3mm;">
+      Parcelele care au nevoie de împăduriri sînt desenate pe hartă cu roșu. Potrivește centrul ecranului la parcela și locul unde vrei să plantezi iar apoi apasă butonul plus. Contribuția ta de {{cost}} lei acoperă jumătate din costul total mediu al sădirii unui puiet. Vei primi coordonatele finale ale copacului cu o abatere de maxim cinci metri. Dacă, într-un caz cu totul excepțional, nu putem să-l plantăm în locul ales de tine te vom anunța.
+    </p>
+    <h4>Contact</h4>
+    <p>
+      <a>rodacini@rodacini.ro</a>
+    </p>
+
+    <div style="float: left; transform:scale(1.5,1.5) translate(1mm,0); background-color:var(--culoare-pagini)">&#9988;</div>
+    <div style="height: 4mm; width: 100%; border-style: none none dotted none;  "></div>
+    <p>&#8203;</p>
+
+    <h4>TODO</h4>
+    <ul style="text-align: left; padding-right: 3mm;">
+      <li>adminul oferă/revocă acces funcționarilor la /admin pentru creerea, modificarea, închiderea parcelelor la /functionar</li>
+      <li>Conectează-te/Înregistreează-te cu Facebook sau Google</li>
+      <li>confirmation email</li>
+      <li>forgot password</li>
+      <li>reset password</li>
+      <li>download personal data</li>
+      <li>download personal data and delete account</li>
+      <li>autologin after register</li>
+      <li>redirect to home after login, spare first autologin</li>
+      <li>save preferences în db. parcă era în localstore da nu mai merge</li>
+      <li></li>
+      <li></li>
+      <li></li>
+
+    </ul>
+    <h4>KWOWN BUGS</h4>
+    <ul style="text-align: left; padding-right: 3mm;">
+      <li>trebuie să găsesc o metodă ca butoanele să aibă funcționalitătile linkurilor. Acum nu pot face open in new tab sau ctrl+click.</li>
+      <li>lista de culori nu o pot face de tagul select cu nested options tags deoarece windows face override cu gri la hover. Pt că n-am folosit select->option butonul submit nu se activează dacă schimb culoarea</li>
+      <li>scrollPositionRestoration:'top' nu merge dacă pagina de la care plec e scrollată ceva mai mult</li>
+      <li>schimbarea culorilor nu face form dirty, deci butonul Salvează nu devine enabled</li>
+      <li>dar odată ce form a devenit dirty "angular does not seem to change form status to pristine, when the user changes UI to default values" https://stackoverflow.com/questions/63488383</li>
+      <li>nu pot întuneca culoarea butoanelor cînd devin enabled fără class="btn" din bootstrap</li>
+      <li>spa-ul e o ștruțocămilă căci înregistrarea și logarea se face pe cshtml-urile din server. Se rezolvă în net8</li>
+      <li>nu mă pricep să înlocuiesc IdentityServer(Duende) dar în net8 spa-urile vor folosi doar Identity</li>
+      <li>pentru single-sign-on îmi trebuie OpenIddict. SSO-ul e ceva foarte invaziv. Adică mă loghez/deloghez în aplicația A și fără să vreau mă loghez/deloghez și în aplicațiile B,C,D...!? Pe lîngă implicațiile privind intimitatea mai trebuie de fiecare dată să mă gîndesc ce impact va avea logarea/delogarea mea în celălalte aplicații</li>
+      <li>Id-ul din Identity.IdentityUser e anotat cu [PersonalData] dar eu vreau să rămînă ca "acest utilizator nu mai există" or smth, nu să dispară copacii dacă-și șterge contul. Pot face override la Id dar nu știu care-s implicațiile. Am făcut Copac's FK nullable, cică e deajuns să se prevină cascade delete</li>
+      <li>Remember me nu merge. Dacă se referă la 'ține-mă logat' tot nu merge căci m-am logat fără să bifez și la restart -de computer!- eram tot logat</li>
+      <li>scroll-margin-top nu merge dacă elementul pe care vreau să-l scrollIntoView, cu un offset față de top, nu-i suficient de înalt</li>
+      <li>pe mobil nu merge stînga-dreapta</li>
+      <li>SignalR nu merge în Azure</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!--<p>&#8203;</p>
+  <p>&#8203;</p>-->
+  <div class="prag"></div><!--nu știu de ce-i așa mare, poate ul-ul de deasupra are ceva margin-->
+</div>
+
+
+  <!--
+
+  box-shadow: inset 0 0 5mm black;
+
+  -->

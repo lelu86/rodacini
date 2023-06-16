@@ -1,0 +1,6 @@
+radacina-buton-mare-drept
+radacina-buton-mare-sting
+radacina-buton-mic-drept
+radacina-buton-mic-sting
+sigla
+restu-s curățate. ar fi frumos să le și cropuiesc la viewport/page
