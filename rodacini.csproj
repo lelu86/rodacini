@@ -49,6 +49,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\db\" />
+    <Folder Include="wwwroot\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="Resources\Images\" />
     <Folder Include="wwwroot\uploads\" />
@@ -56,6 +58,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="rodacinisqlite.db" />
     <None Include="wwwrooot\db\rodacinisqlite.db" />
     <None Include="bin\rodacinisqlite.db" />
     <None Include="wwwroot\parceas.json" />

@@ -11,8 +11,16 @@ const PROXY_CONFIG = [
       "/contributia.json",
       "/parceas.json",
       "/ro_frontiera_polilinie.json",
-      //"rodacinisqlite.db",
+      "rodacinisqlite.db",
       "db",
+      "wwwroot",
+      "wwwroot/db",
+      "wwwroot/db/rodacinisqlite.db",
+      "/db",
+      "/db/rodacinisqlite.db",
+      "bin",
+      "bin/rodacinisqlite.db",
+      "/bin",
 
 
       "/uzer",//controllerii aici musai
