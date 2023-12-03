@@ -21,7 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 var dataSource = Path.Combine(((IWebHostEnvironment)builder.Environment).WebRootPath, "db/rodacinisqlite.db");//bm
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options./*UseSqlServer*/UseSqlite(connectionString/*$"Data Source={dataSource};"*/));
+    options./*UseSqlServer*/UseSqlite(/*connectionString*/$"Data Source={dataSource};"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false/*true*/)//false bm

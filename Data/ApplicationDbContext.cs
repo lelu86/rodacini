@@ -10,7 +10,7 @@ namespace rodacini.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            //Database.EnsureCreated();//bm
+            Database.EnsureCreated();//bm
         }
         public DbSet<Copac>? Copacs { get; set; } /*= null!;*///public DbSet<Pizza> Pizzas => Set<Pizza>();
         public DbSet<Functionar>? Functionars { get; set; } /*= null!;*/
