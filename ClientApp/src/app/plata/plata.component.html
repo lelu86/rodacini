@@ -1,0 +1,20 @@
+
+
+
+<button *ngIf="sod=='dreptaci'" class="plateste-mare-sting" id="deplata-mare-sting" [routerLink]="['plata']" style="padding: 0; margin: 0; ">
+    <p style="position:absolute; transform:translate(46%,0mm); z-index:77; color:white">{{getUzer.neplatiti}}&#215;{{getContributia.contributia}}={{getUzer.neplatiti * getContributia.contributia}}lei</p>
+    <img id="img-mare-sting" src="/assets/img/plateste-buton-mare-sting.svg" alt="buton plateste">
+</button>
+<button *ngIf="sod=='dreptaci'" class="plateste-mic-drept" id="deplata-mic-drept" [routerLink]="['plata']" style="padding: 0; margin: 0; ">
+    <p style="position:absolute; transform:translate(44%,-12.5mm); z-index:77; color:white">{{getUzer.neplatiti}}&#215;{{getContributia.contributia}}<br style="display:block; content:''; margin-top:-2.5mm;" />={{getUzer.neplatiti * getContributia.contributia}}lei</p>
+    <img id="img-mic-drept" src="/assets/img/plateste-buton-mic-drept.svg" alt="buton plateste">
+</button>
+
+<button *ngIf="sod=='stingaci'" class="plateste-mare-drept" id="deplata-mare-drept" [routerLink]="['plata']" style="padding: 0; margin: 0; ">
+    <p style="position:absolute; transform:translate(55%,0mm); z-index:77; color:white">{{getUzer.neplatiti}}&#215;{{getContributia.contributia}}={{getUzer.neplatiti * getContributia.contributia}}lei</p>
+    <img id="img-mare-drept" src="/assets/img/plateste-buton-mare-drept.svg" alt="buton plateste">
+</button>
+<button *ngIf="sod=='stingaci'" class="plateste-mic-sting" id="deplata-mic-sting" [routerLink]="['plata']" style="padding:0; margin:0;">
+    <p style="position:absolute; transform:translate(22%,-12.5mm); z-index:77; color:white">{{getUzer.neplatiti}}&#215;{{getContributia.contributia}}<br style="display:block; content:''; margin-top:-2.5mm;" />={{getUzer.neplatiti * getContributia.contributia}}lei</p>
+    <img id="img-mic-sting" src="/assets/img/plateste-buton-mic-sting.svg" alt="buton plateste">
+</button>

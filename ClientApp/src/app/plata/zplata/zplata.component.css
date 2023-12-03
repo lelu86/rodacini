@@ -1,0 +1,32 @@
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 36mm;
+  left: 50%;
+  transform: translate(-50%, 0%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.usa {
+  box-shadow: 0 0 3mm black;
+  border-radius: 12mm;
+  background-color: var(--culoare-pagini);
+}
+
+.prag {
+  height: 8mm; /*va fi înapoi 12*/
+}
+
+@media screen and (max-width: 210mm) {
+  .toc {
+    top: 12mm;
+    max-width: 64mm;
+  }
+
+  .prag {
+    height: 20mm; /*va fi înapoi 24*/
+  }
+}

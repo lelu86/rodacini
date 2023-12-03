@@ -1,0 +1,133 @@
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.usa {
+  bbbbox-shadow: 0 0 3mm black;
+  bbborder-bottom-left-radius: 0mm 100%;
+  bbborder-bottom-right-radius: 0mm 100%;
+  border-radius: 99%/20%;
+  background-color: var(--kculoare-pagini);
+  max-height: 32mm;
+  overflow-x: hidden;
+  /*overflow-y: hidden;*/
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+  ::-webkit-scrollbar:vertical {
+    width: 0px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 0px;
+  }
+
+
+
+
+
+#mis {
+  box-shadow: 0 0 3mm black;
+  border-top-right-radius: 12mm;
+  background-color: var(--culoare-pagini);
+  padding: 1mm;
+}
+
+
+
+
+@media screen and (min-width: 210mm) {
+
+  #aidi-locbtn {
+    min-width: 94mm !important;
+  }
+
+  #aidi-uatbtn {
+    min-width: 94mm !important;
+  }
+
+  .zbo-mic-dreptaci {
+    display: none !important;
+  }
+
+  .zbo-mic-stingaci {
+    display: none !important;
+  }
+
+  .zbo-mare-dreptaci {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right: calc(((100% - 48mm) / 5) * 0);
+    height: 24mm;
+    width: calc((100% - 48mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+  }
+
+  .zbo-mare-stingaci {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: calc(((100% - 48mm) / 5) * 0);
+    height: 24mm;
+    width: calc((100% - 48mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+  }
+}
+
+@media screen and (max-width: 210mm) {
+
+  .toc {
+    max-width: 64mm;
+  }
+
+  .zbo-mic-dreptaci {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: calc(((100% - 24mm) / 3) * 0);
+    height: 12mm;
+    width: calc((100% - 24mm) / 2);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+  }
+
+  .zbo-mic-stingaci {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: calc(((100% - 24mm) / 3) * 0);
+    height: 12mm;
+    width: calc((100% - 24mm) / 2);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+  }
+
+  .zbo-mare-dreptaci {
+    display: none !important;
+  }
+
+  .zbo-mare-stingaci {
+    display: none !important;
+  }
+}

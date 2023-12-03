@@ -1,0 +1,142 @@
+@media screen and (min-width: 210mm) {
+  button.plateste-mic-sting {
+    display: none !important;
+  }
+
+  button.plateste-mic-drept {
+    display: none !important;
+  }
+
+  button.plateste-mare-sting {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 48mm;
+    width: 48mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-top-right-radius: 48mm;
+    border: none;
+  }
+
+  button.plateste-mare-drept {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 48mm;
+    width: 48mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-top-left-radius: 48mm;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 210mm) {
+  button.plateste-mic-sting {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 24mm;
+    width: 24mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-bottom-right-radius: 24mm;
+    border: none;
+  }
+
+  button.plateste-mic-drept {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 24mm;
+    width: 24mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-bottom-left-radius: 24mm;
+    border: none;
+  }
+
+  button.plateste-mare-sting {
+    display: none !important;
+  }
+
+  button.plateste-mare-drept {
+    display: none !important;
+  }
+}
+
+#img-mare-sting { /*nu merge inline style*/
+  pointer-events: none; /*îmi trebuie altfel răspunde la hover în tot viewportul svg-ului, și peste hartă*/
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#img-mic-sting {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#img-mare-drept {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#img-mic-drept {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+
+
+/****************************************************************/
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 36mm;
+  left: 50%;
+  transform: translate(-50%, 0%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.usa {
+  box-shadow: 0 0 3mm black;
+  border-radius: 12mm;
+  background-color: var(--culoare-pagini);
+}
+
+.prag {
+  height: 8mm; /*va fi înapoi 12*/
+}
+
+@media screen and (max-width: 210mm) {
+  .toc {
+    top: 12mm;
+    max-width: 64mm;
+  }
+
+  .prag {
+    height: 20mm; /*va fi înapoi 24*/
+  }
+}
+

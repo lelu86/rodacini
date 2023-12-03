@@ -1,0 +1,105 @@
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 36mm;
+  left: 50%;
+  transform: translate(-50%, 0%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.usa {
+  box-shadow: 0 0 3mm black;
+  border-radius: 12mm;
+  background-color: var(--culoare-pagini);
+}
+
+.prag {
+  height: 12mm;
+}
+
+form:valid input[type="submit"] {
+  background-color: green;
+  color: greenyellow;
+}
+
+form:invalid input[type="submit"] {
+  background-color: red;
+  color: pink;
+}
+
+/*label {
+  display: block;
+  margin: 0.5em 0;
+}*/
+
+.slots {
+  display: grid;
+  justify-content: center;
+  gap: 0mm;
+  grid-template-areas:
+      ". . . a a . . ."
+      ". . b b c c . ."
+      ". d d e e f f ."
+      "g g h h i i j j";
+}
+
+.slot:nth-child(1) {
+  grid-area: a
+}
+.slot:nth-child(2) {
+  grid-area: b
+}
+.slot:nth-child(3) {
+  grid-area: c
+}
+.slot:nth-child(4) {
+  grid-area: d
+}
+.slot:nth-child(5) {
+  grid-area: e
+}
+.slot:nth-child(6) {
+  grid-area: f
+}
+.slot:nth-child(7) {
+  grid-area: g
+}
+.slot:nth-child(8) {
+  grid-area: h
+}
+.slot:nth-child(9) {
+  grid-area: i
+}
+.slot:nth-child(10) {
+  grid-area: j
+}
+
+.slot {
+  height:24mm;
+  width: 24mm;
+  /*border: 2px solid black;*/
+  /*background-color: Silver;*/
+  display: grid;
+  place-items: center;
+  /*font-size: 3mm;*/
+}
+
+@media screen and (max-width: 210mm) {
+  .toc {
+    top: 12mm;
+    max-width: 64mm;
+  }
+
+  .prag {
+    height: 24mm;
+  }
+
+  .slot {
+    width: 16mm;
+    height: 24mm;
+    font-size: 3.5mm;
+  }
+}

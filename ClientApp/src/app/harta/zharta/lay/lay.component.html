@@ -1,0 +1,44 @@
+<button *ngIf="sod=='dreptaci'" class="lay-mare-dreptaci" (click)="swapFundal()" style="padding:0;" alt="buton layer fundal">
+    <img src="/assets/img/swap.svg">
+</button>
+<button *ngIf="sod=='dreptaci'" class="lay-mic-dreptaci" (click)="swapFundal()" style="padding:0;" alt="buton layer fundal">
+    <img src="/assets/img/swap.svg">
+</button>
+<button *ngIf="sod=='stingaci'" class="lay-mare-stingaci" (click)="swapFundal()" style="padding:0;" alt="buton layer fundal">
+    <img src="/assets/img/swap.svg">
+</button>
+<button *ngIf="sod=='stingaci'" class="lay-mic-stingaci" (click)="swapFundal()" style="padding:0;" alt="buton layer fundal">
+    <img src="/assets/img/swap.svg">
+</button>
+
+<small *ngIf="sod=='dreptaci'" style="display:block; line-height:3mm; white-space:nowrap; position:absolute; top:50%; left:calc(100% - 1.7mm); transform:translate(-50%,-50%)rotate(-90deg)" [style.background-color]="culoareButoane50Alpha">
+    <small>
+        {{(getUzer.limba=='ro' && getClay()=='ESRI')?'fundal © ':''}}<a *ngIf="getUzer.limba=='ro' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='ro' && getClay()=='OSM')?'fundal © ':''}}<a *ngIf="getUzer.limba=='ro' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='ro' && getClay()=='OSM'"> și contributorii</span>
+        {{(getUzer.limba=='hu' && getClay()=='ESRI')?'háttér © ':''}}<a *ngIf="getUzer.limba=='hu' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='hu' && getClay()=='OSM')?'háttér © ':''}}<a *ngIf="getUzer.limba=='hu' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='hu' && getClay()=='OSM'"> és közreműködők</span>
+        {{(getUzer.limba=='en' && getClay()=='ESRI')?'background © ':''}}<a *ngIf="getUzer.limba=='en' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='en' && getClay()=='OSM')?'background © ':''}}<a *ngIf="getUzer.limba=='en' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='en' && getClay()=='OSM'"> & contributors</span>
+    </small>
+</small>
+<small *ngIf="sod=='stingaci'" style="display:block; line-height:3mm; white-space:nowrap; position:absolute; top:50%; left:calc(0% + 1.7mm); transform:translate(-50%,-50%)rotate(-90deg)" [style.background-color]="culoareButoane50Alpha">
+    <small>
+        {{(getUzer.limba=='ro' && getClay()=='ESRI')?'fundal © ':''}}<a *ngIf="getUzer.limba=='ro' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='ro' && getClay()=='OSM')?'fundal © ':''}}<a *ngIf="getUzer.limba=='ro' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='ro' && getClay()=='OSM'"> și contributorii</span>
+        {{(getUzer.limba=='hu' && getClay()=='ESRI')?'háttér © ':''}}<a *ngIf="getUzer.limba=='hu' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='hu' && getClay()=='OSM')?'háttér © ':''}}<a *ngIf="getUzer.limba=='hu' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='hu' && getClay()=='OSM'"> és közreműködők</span>
+        {{(getUzer.limba=='en' && getClay()=='ESRI')?'background © ':''}}<a *ngIf="getUzer.limba=='en' && getClay()=='ESRI'" style="text-decoration: none" href="https://www.esri.com">ESRI</a>
+        {{(getUzer.limba=='en' && getClay()=='OSM')?'background © ':''}}<a *ngIf="getUzer.limba=='en' && getClay()=='OSM'" style="text-decoration: none" href="https://www.openstreetmap.org">OSM</a><span *ngIf="getUzer.limba=='en' && getClay()=='OSM'"> & contributors</span>
+    </small>
+</small>
+
+<div id="pentru_jq" style="background-color:var(--culoare-butoane)"></div>
+
+
+<!--
+    style="background-color: rgba(var(--culoare-butoane), 0.5);"
+
+    {{getUzer.limba=='ro'?[[getClay()=='OSM'?'fundal © OSM și contributorii':'fundal © ESRI']]:''}}
+    {{getUzer.limba=='hu'?[[getClay()=='OSM'?'háttér © OSM és közreműködők':'háttér © ESRI']]:''}}
+    {{getUzer.limba=='en'?[[getClay()=='OSM'?'background © OSM & contributors':'background © ESRI']]:''}}
+-->

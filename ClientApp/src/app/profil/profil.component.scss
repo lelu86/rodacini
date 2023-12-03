@@ -1,0 +1,79 @@
+@media screen and (min-width: 210mm) {
+  button.profil-mic-dreptaci {
+    display: none !important;
+  }
+  button.profil-mic-stingaci {
+    display: none !important;
+  }
+
+  button.profil-mare-dreptaci {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: calc(((100% - 48mm) / 4) * 3);
+    height: 24mm;
+    width: calc((100% - 48mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+    border-bottom-left-radius: 24mm;
+  }
+  button.profil-mare-stingaci {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: calc(((100% - 48mm) / 4) * 3);
+    height: 24mm;
+    width: calc((100% - 48mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+    border-bottom-right-radius: 24mm;
+  }
+}
+
+@media screen and (max-width: 210mm) {
+  button.profil-mic-dreptaci {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: calc(((100% - 24mm) / 4) * 3);
+    height: 12mm;
+    width: calc((100% - 24mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+    border-top-right-radius: 12mm;
+  }
+  button.profil-mic-stingaci {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right: calc(((100% - 24mm) / 4) * 3);
+    height: 12mm;
+    width: calc((100% - 24mm) / 4);
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border: none;
+    border-top-left-radius: 12mm;
+  }
+
+  button.profil-mare-dreptaci {
+    display: none !important;
+  }
+  button.profil-mare-stingaci {
+    display: none !important;
+  }
+}
+
+/*img {
+  pointer-events: none !important;*/ /*mu merge*/
+/*}*/
+
+#eventless {
+  pointer-events: none !important;
+}

@@ -1,0 +1,103 @@
+@media screen and (min-width: 210mm) {
+  button.planteaza-mic-sting {
+    display: none !important;
+  }
+  button.planteaza-mic-drept {
+    display: none !important;
+  }
+
+  button.planteaza-mare-sting {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48mm;
+    width: 48mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-bottom-right-radius: 48mm;
+    border: none;
+  }
+  button.planteaza-mare-drept {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 48mm;
+    width: 48mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-bottom-left-radius: 48mm;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 210mm) {
+  button.planteaza-mic-sting {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 24mm;
+    width: 24mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-top-right-radius: 24mm;
+    border: none;
+  }
+  button.planteaza-mic-drept {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 24mm;
+    width: 24mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-top-left-radius: 24mm;
+    border: none;
+  }
+
+  button.planteaza-mare-sting {
+    display: none !important;
+  }
+  button.planteaza-mare-drept {
+    display: none !important;
+  }
+}
+
+#img-mare-sting {/*nu merge inline style*/
+  pointer-events: none;/*îmi trebuie altfel răspunde la hover în tot viewportul svg-ului, și peste hartă*/
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#img-mic-sting {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#img-mare-drept {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#img-mic-drept {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+

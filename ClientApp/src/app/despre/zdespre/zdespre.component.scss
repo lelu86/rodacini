@@ -1,0 +1,49 @@
+#procesareRefresh4 {
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% + 12mm);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 333;
+  color: lightblue;
+}
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 36mm;
+  left: 50%;
+  transform: translate(-50%, 0%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+.usa {
+  box-shadow: 0 0 3mm black;
+  border-radius: 12mm;
+  background-color: var(--culoare-pagini);
+}
+.prag {
+  height: 8mm;/*va fi înapoi 12*/
+}
+
+@media screen and (max-width: 210mm) {
+  .toc {
+    top: 12mm;
+    max-width: 64mm;
+  }
+  .prag {
+    height: 20mm;/*va fi înapoi 24*/
+  }
+}
+
+
+/*
+    
+    display: inline-block;
+    border: 2px solid blue;
+    position: Absolute la parent. Fixed la viewport, scrollul nu-l afectează
+
+
+
+*/

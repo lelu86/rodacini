@@ -1,0 +1,95 @@
+
+<div class="toc" style="margin: 0; border: 0; padding:0;">
+    <div class="usa">
+        <h2 style="text-align: center; padding-top: 6mm; pointer-events: none;">Rodăcini</h2>
+        <img src="/assets/img/sigla.svg"
+             style="width: 30mm; border-radius: 50%; border: .5mm solid black;" />
+        <h4>{{getUzer.limba=='ro'?"România prinde rădăcini!":""}}{{getUzer.limba=='hu'?"Románia gyökeret ver!":""}}{{getUzer.limba=='en'?"Romania grows roots!":""}}</h4>
+        <p style="padding-left: 3mm; padding-right: 3mm;">
+            {{getUzer.limba=='ro'?"Acest proiect e rodul colaborării dintre un grup de entuziaști și Romsilva. Încurajăm exploatările raționale și oprirea lor definitivă pe suprafețe cît mai întinse. 99% din copacii plantați de Romsilva trăiesc peste un secol.":""}}
+            {{getUzer.limba=='hu'?"Ez a projekt a rajongók egy csoportja és a Romsilva együttműködésének eredménye. Ösztönözzük a racionális kiaknázásokat és azok végleges megszüntetését a lehető legszélesebb felületeken. A Romsilva által ültetett fák 99%-a több mint egy évszázadot él.":""}}
+            {{getUzer.limba=='en'?"This project is the result of the collaboration between a group of enthusiasts and Romsilva. We encourage rational exploitations and their definitive cessation on the widest possible surfaces. 99% of the trees planted by Romsilva live over a century.":""}}
+        </p>
+        <h4>{{getUzer.limba=='ro'?"Cum folosesc?":""}}{{getUzer.limba=='hu'?"Hogyan használjam?":""}}{{getUzer.limba=='en'?"How do I use it?":""}}</h4>
+        <p style="padding-left: 3mm; padding-right: 3mm;">
+            {{getUzer.limba=='ro'?"Parcelele care au nevoie de împăduriri sînt desenate pe hartă cu roșu. Potrivește centrul ecranului la parcela și locul unde vrei să plantezi iar apoi apasă butonul plus. Contribuția ta de":""}}
+            {{getUzer.limba=='hu'?"Az erdősítésre szoruló parcellák pirossal vannak kirajzolva a térképen. Illessze a képernyő közepét a parcellához és a helyhez, ahová ültetni kíván, majd nyomja meg a plusz gombot. Az Ön hozzájárulása":""}}
+            {{getUzer.limba=='en'?"The plots that need afforestation are drawn on the map in red. Match the center of the screen to the plot and the place where you want to plant and then press the plus button. Your contribution of":""}}
+            {{getContributia.contributia}}
+            {{getUzer.limba=='ro'?"lei acoperă jumătate din costul unui puiet. Vei primi coordonatele finale ale copacului cu o abatere de maxim cinci metri. Dacă, într-un caz cu totul excepțional, nu putem să-l plantăm în locul ales de tine te vom anunța.":""}}
+            {{getUzer.limba=='hu'?"lej egy kölyökkutya költségének felét fedezi. A fa végső koordinátáit legfeljebb öt méteres eltéréssel kapja meg. Ha teljesen kivételes esetben nem tudjuk az Ön által választott helyre ültetni, jelezzük.":""}}
+            {{getUzer.limba=='en'?"lei covers half the cost of a sapling. You will receive the final coordinates of the tree with a maximum deviation of five meters. If, in a completely exceptional case, we cannot plant it in the place chosen by you, we will let you know.":""}}
+        </p>
+        <h4>{{getUzer.limba=='ro'?"Contact":""}}{{getUzer.limba=='hu'?"Kapcsolatba lépni":""}}{{getUzer.limba=='en'?"Contact":""}}</h4>
+        <p>
+            <a>rodacini@rodacini.ro</a>
+        </p>
+
+        <div style="float: left; transform:scale(1.5,1.5) translate(1mm,0); background-color:var(--culoare-pagini)">&#9988;</div>
+        <div style="height: 4mm; width: 100%; border-style: none none dotted none;  "></div>
+        <p>&#8203;</p>
+
+        <h4>TODO</h4>
+        <ul style="text-align: left; padding-right: 3mm;">
+            <li>Conectează-te/Înregistreează-te cu Facebook sau Google</li>
+            <li>confirmation email... sau înregistrare doar cu parolă</li>
+            <li>forgot password</li>
+            <li>reset password</li>
+            <li>zoom out declutter strategy</li>
+            <li>load trees by viewport bbox only</li>
+            <li>smtp, pop</li>
+            <li>restore UAT's table to all rows after github give me new LFS quota allowance</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <h4>KWOWN BUGS</h4>
+        <ul style="text-align: left; padding-right: 3mm;">
+            <li>trebuie să găsesc o metodă ca butoanele să aibă funcționalitătile linkurilor. Acum nu pot face open in new tab sau ctrl+click.</li>
+            <li>lista de culori nu o pot face de tagul select cu nested options tags deoarece windows face override cu gri la hover. Pt că n-am folosit select->option butonul submit nu se activează dacă schimb culoarea</li>
+            <li>odată ce form a devenit dirty "angular does not seem to change form status to pristine, when the user changes UI to default values"
+            <li>id-ul din Identity.IdentityUser e anotat cu [PersonalData] dar eu vreau să rămînă ca "acest utilizator nu mai există" or smth, nu să dispară copacii dacă-și șterge contul. Pot face override la Id dar nu știu care-s implicațiile. Am făcut Copac's FK nullable, cică e deajuns să se prevină cascade delete</li>
+            <li>input change not firing on same selection in Chrome, working in FF</li>
+            <li>nu pot porni cu butonul plătește disabled căci stripe iframe form nu-mi zice cînd devine validă</li>
+            <li>stripe locales not working</li>
+            <li>nu țin cont de panta terenului la calcularea distanței minime dintre puieți</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <h4>Nice to have</h4>
+        <ul style="text-align: left; padding-right: 3mm;">
+            <li>În special pentru organizații, plantare după poligon cu o densitate standard a copacilor. Opțional la o densitate mai mică dar preț mai mare per puiet</li>
+            <li>pessimist concurency pt plantarea după poligon</li>
+            <li>algo for auto closing of finished plots. It can be something as simple as an increment which flag the plot finished on reaching preset value</li>
+            <li>Newsletter</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <h4>Soluții originale</h4>
+        <small>(după mintea mea)</small>
+        <ul style="text-align: left; padding-right: 3mm;">
+            <li>nu am admin/staff panel pentru, de exemplu, creerea, modificarea și închiderea parcelelor ci adminul e cine are acces la server, mai exact drept de scriere la wwwroot/parcele.json. Am un FileWatcher care la modificarea fișierului cu parcele callează SignalR/websockets ce emite modificările la toți clienții.</li>
+            <li>nu am folosit ng-i18n sau altceva pt traduceri ci interpolări cu ternary operator</li>
+            <li>nu stăpînesc ViewChild, Input, Output, Inject, DI, servicii... da se pare că pot scăpa doar cu variabile și metode statice. Observables, și o bună parte din rxjs ar trebui să stăpînesc că totu-i async chiar dacă mă descurc doar cu .subscribe</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p>&nbsp;</p>
+    </div>
+    <!--<p>&#8203;</p>
+    <p>&#8203;</p>-->
+    <div class="prag"></div><!--nu știu de ce-i așa mare, poate ul-ul de deasupra are ceva margin-->
+</div>
+
+
+  <!--
+
+  box-shadow: inset 0 0 5mm black;
+
+  -->

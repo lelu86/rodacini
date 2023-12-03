@@ -1,0 +1,96 @@
+/*@import "node_modules/ol/ol.css";*/
+
+
+div.tot {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.harta {
+  width: 100%;
+  height: calc(100% /* + 12mm + 12mm*/);
+  transform: translate(0,+0mm);
+  /*height: calc(100% - 20mm);
+  position:absolute;
+  top: +10mm;*/ /*asta ca să dovedesc că e 100% căci n-am încredere în highlightul inspectului*/
+}
+#cruce {
+  pointer-events: none;
+  position: absolute;
+  /*top: calc(50% + 12mm);*/
+  top: calc(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#aidi-refresh {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 333;
+  color: lightblue;
+  display: none;
+}
+
+
+@media screen and (max-width: 210mm) {
+  .harta {
+    /*height: calc(100% + 6mm + 6mm);*/
+    /*transform: translate(0,-12mm);*/
+  }
+  #cruce {
+    /*top:calc(50% - 6mm);*/
+    top: calc(50%);
+  }
+}
+
+/*.ol-control,
+.ol-control:hover {
+  background-color: transparent !important;
+  padding: unset !important;
+}
+
+button {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+  height: 36px !important;
+  width: 36px !important;
+  color: white !important;
+  background-color: rgb(110, 209, 86) !important;
+  box-shadow: black 0 3px 3px !important;
+
+  &:hover {
+    background-color: rgb(135, 250, 107) !important;
+  }
+}
+
+button:focus {
+  background-color: rgb(135, 250, 107) !important;
+}*/
+
+
+
+
+
+/*#harta {
+  border: 0;
+  width: 100%;
+  height: calc(100vh + 56mm);*//*așa ascund copyrightul, labelul google și zoom controllers. voi face alt copyright și controllerși în ol*/
+  /*position:absolute;
+  top:-28mm;
+}
+
+#cruce {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+
+

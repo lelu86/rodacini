@@ -1,0 +1,120 @@
+<!-- <body>
+  <app-nav-menu></app-nav-menu>
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+</body> -->
+
+<body>
+    <app-planteaza></app-planteaza>
+    <app-profil></app-profil>
+    <app-statistici></app-statistici>
+    <app-top></app-top>
+    <app-despre></app-despre>
+
+    <app-enhuro></app-enhuro>
+    <app-plata *ngIf="getUzer && getUzer.neplatiti > 0"></app-plata>
+
+
+
+    <router-outlet></router-outlet>
+
+    <div id="toast" style="white-space:pre-wrap; background-color:var(--culoare-butoane); color:black; transform: translate(0,-24mm); border-radius:12mm;  box-shadow: 0 0 30mm black;">
+        {{getUzer.etc}}<!--văd că ghlypsuri nu randează da nici nu-mi trebe-->
+    </div>
+    <style>
+#toast { /*bozmeg! bozmeg! bozmeg! tre fiecare cu alt nume că id-ii îs globali*/
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 64mm; /* Set a default minimum width */
+    max-width: 64mm;
+    /*margin-left: 32mm;*/ /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: calc(50% - 32mm); /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+    /* Show the snackbar when clicking on a button (class added with JavaScript) */
+    #toast.show3s {
+        visibility: visible; /* Show the snackbar */
+        /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+          However, delay the fade out process for 2.5 seconds */
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    #toast.show6s {
+        visibility: visible; /* Show the snackbar */
+        /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+          However, delay the fade out process for 2.5 seconds */
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+        animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    }
+
+    #toast.show9s {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 8.5s;
+        animation: fadein 0.5s, fadeout 0.5s 8.5s;
+    }
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+</style>
+
+
+
+
+
+</body>

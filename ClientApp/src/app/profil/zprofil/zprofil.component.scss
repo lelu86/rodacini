@@ -1,0 +1,135 @@
+.toc {
+  position: absolute; /*la fixed dispare scrollul*/
+  top: 36mm;
+  left: 50%;
+  transform: translate(-50%, 0%); /*(h,v)*/
+  width: 96mm;
+  max-width: 96mm;
+  min-width: 64mm;
+  text-align: center;
+  word-wrap: break-word;
+}
+.usa {
+  box-shadow: 0 0 3mm black;
+  border-radius: 12mm;
+  background-color: var(--culoare-pagini);
+}
+.prag {
+  height: 12mm;
+}
+
+.btpz {
+    height: 24mm;
+    width: 24mm;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-radius: 50%;
+    border:none;
+    padding:0;
+}
+
+
+@media screen and (max-width: 210mm) {
+  .toc {
+    top: 12mm;
+    max-width: 64mm;
+  }
+  .prag {
+      height:24mm;
+  }
+  .zero {
+    font-size: .88em;
+  }
+}
+
+div.grup-formular{
+  padding-top:3mm;
+}
+
+div.dropbtn-nnsnna { /*ce are efect din stilul lui form-control*/
+  position: relative; /*by me*/
+  padding: .375rem; /*by me*/
+  color: #212529;
+  background-color: var(--culoare-butoane);
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+div.dropbtn-nnsnna:focus { /*by me*/
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+
+div.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0rem;/*by me*/
+}
+
+div.dropdown-content:focus { /*by me*/
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+
+div.culoare {
+  position: relative; /*by me ca să acopere butonul salvează*/
+  z-index: 1; /*by me ca să acopere butonul salvează*/
+}
+
+div.culoare:focus {
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+  outline: .5mm solid black;
+  outline-offset:-.5mm;
+}
+
+div.culoare:hover {
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+  outline: .5mm solid black;
+  outline-offset: -.5mm;
+}
+
+div.show {
+  display: block;
+}
+
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 2mm solid green;
+}
+.ng-invalid:not(form) {
+  border-left: 2mm solid red;
+}
+
+
+
+form:valid input[type="submit"] {
+  background-color: red !important;
+  color: blue !important;
+}
+
+form:invalid input[type="submit"] {
+  background-color: pink !important;
+  color: azure !important;
+}
+
+/*
+button.buton-stingaci, button.buton-dreptaci {
+  display: inline-block;
+}
+
+.cutie-sod {
+  text-align: center;
+  left: 50%;
+  transform: translate(-50, -0%);
+}
+*/
+
+
+

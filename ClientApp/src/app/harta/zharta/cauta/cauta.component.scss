@@ -1,0 +1,89 @@
+@media screen and (min-width: 210mm) {
+  div.zboara-mic-sting {
+    display: none !important;
+  }
+  div.zboara-mic-drept {
+    display: none !important;
+  }
+
+  div.zboara-mare-sting {
+    z-index: 999;
+    position: fixed;
+    top: 32mm;
+    right: 10mm;
+    height: 42mm;
+    width: 42mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-top-left-radius: 11mm;
+    border-bottom-left-radius: 11mm;
+    border-bottom-right-radius: 11mm;
+  }
+
+  div.zboara-mare-drept {
+    z-index: 999;
+    position: fixed;
+    top: 32mm;
+    left: 10mm;
+    height: 42mm;
+    width: 42mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-radius: 11mm;
+  }
+}
+
+@media screen and (max-width: 210mm) {
+  div.zboara-mic-sting {
+    z-index: 999;
+    position: fixed;
+    top: 2mm;
+    right: 2mm;
+    height: 22mm;
+    width: 22mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-radius: 11mm;
+  }
+
+  div.zboara-mic-drept {
+    z-index: 999;
+    position: fixed;
+    top: 2mm;
+    left: 2mm;
+    height: 22mm;
+    width: 22mm;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 1mm black, 0 0 3mm black;
+    background: var(--culoare-butoane);
+    border-radius: 11mm;
+  }
+
+  div.zboara-mare-sting {
+    display: none !important;
+  }
+  div.zboara-mare-drept {
+    display: none !important;
+  }
+}
+
+button {
+  height: 12mm;
+  width: calc((100% - 0mm) / 1); /* în scss nu merge calc((vw - 42mm) / 4); */
+  box-shadow: inset 0 0 3mm grey;
+  background: var(--culoare-butoane);
+  border-top-left-radius: 10mm;
+}
+
+img {
+  border-radius: 50%;
+}
+
+
+
+/*
+    DEOCAMDATA LUCREZ NUMAI CU MARE sting
+*/

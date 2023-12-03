@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "skipLibCheck": true, //bm pt geotiff ts care nu se intelege cu geotiff js în onrender
+    "noImplicitAny": false, //bm căci "strictNullChecks": false îmi dădea o eroare în main.ts
+    "strictPropertyInitialization": false, //bm //ca să nu-mi trebuiască "!" aka bang operator
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "types": [ "jquery" ], //bm
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "strictNullChecks": false,//bm ca să nu-mi trebuiască optional "chaining" la uzer : Uzer | null
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

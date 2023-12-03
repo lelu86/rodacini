@@ -1,0 +1,201 @@
+<div *ngIf="locList.length>0 && (cexpandat=='madLoc' || cexpandat=='midLoc' || cexpandat=='masLoc' || cexpandat=='misLoc')"
+     id="aidi-loclist" class="toc" style="margin: 0; border: 0; padding:0;">
+    <!-- <div style="box-shadow: 0mm 3mm 3mm -3mm white !important; border-bottom: solid black !important; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; height: 6mm; border: 0; background-image: linear-gradient(rgba(0,0,0,0),var(--culoare-butoane))"></div> -->
+    <div style="position:relative; transform:translateY(6mm); outline: black solid 2mm; border: solid black !important; border-radius: 99%/99%; height: 6mm; border: 0; background-color: black"></div>
+    <div class="usa"
+         style="position:relative; z-index:9 !important; ffloat:right; width:ccalc(((100vw - 24mm) / 2) - 2mm); ttransform:translate(0mm,0mm); border-color:grey !important; padding:1mm; padding-top:0; padding-bottom:0;">
+        <button *ngFor="let loc of locList" id="aidi-locbtn" [value]="loc" (click)="locZboara(loc); mmmmVizibil=false"
+                style="border:none; position:relative; z-index:999 !important; background-color:var(--culoare-butoane); border-radius:4mm; white-space:nowrap; overflow:hidden; min-width:62mm; max-width:94mm; width:62mm; box-shadow: 0 0 3mm black;">
+            {{loc.nume}}
+        </button>
+    </div>
+    <!-- <div style="box-shadow: 0mm -3mm 3mm -3mm white; border-top: solid black !important; border-bottom-left-radius: 50% 100%; border-bottom-right-radius: 50% 100%; height: 6mm; border: 0; background-image: linear-gradient(var(--culoare-butoane),rgba(0,0,0,0))"></div> -->
+    <div style="position:relative; transform:translateY(-6mm); outline: black solid 2mm; border: solid black !important; border-radius: 99%/99%; height: 6mm; border: 0; background-color: black"></div>
+</div>
+
+
+<div *ngIf="uatList.length>0 && (cexpandat=='madUat' || cexpandat=='midUat' || cexpandat=='masUat' || cexpandat=='misUat')"
+     id="aidi-uatlist" class="toc" style="margin: 0; border: 0; padding:0;">
+    <!-- <div style="box-shadow: 0mm 3mm 3mm -3mm white !important; border-bottom: solid black !important; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; height: 6mm; border: 0; background-image: linear-gradient(rgba(0,0,0,0),var(--culoare-butoane))"></div> -->
+    <div style="position:relative; transform:translateY(6mm); outline: black solid 2mm; border: solid black !important; border-radius: 99%/99%; height: 6mm; border: 0; background-color: black"></div>
+    <div class="usa"
+         style="position:relative; z-index:9 !important; ffloat:right; width:ccalc(((100vw - 24mm) / 2) - 2mm); ttransform:translate(0mm,0mm); border-color:grey !important; padding:1mm; padding-top:0; padding-bottom:0;">
+        <button *ngFor="let uat of uatList" id="aidi-uatbtn" [value]="uat" (click)="uatZboara(uat); mmmmVizibil=false"
+                style="border:none; position:relative; z-index:999 !important; background-color:var(--culoare-butoane); border-radius:4mm; white-space:nowrap; overflow:hidden; min-width:62mm; max-width:94mm; width:62mm; box-shadow: 0 0 3mm black;">
+            {{uat.arondat ? uat.arondat : uat.nume}}
+        </button>
+    </div>
+    <!-- <div style="box-shadow: 0mm -3mm 3mm -3mm white; border-top: solid black !important; border-bottom-left-radius: 50% 100%; border-bottom-right-radius: 50% 100%; height: 6mm; border: 0; background-image: linear-gradient(var(--culoare-butoane),rgba(0,0,0,0))"></div> -->
+    <div style="position:relative; transform:translateY(-6mm); outline: black solid 2mm; border: solid black !important; border-radius: 99%/99%; height: 6mm; border: 0; background-color: black"></div>
+</div>
+
+
+<!--nu merge să oglindesc sau rotesc săgeata plină de dreapta asta: &#10148; sau asta: &#10132; așa că folosesc imagine-->
+<div *ngIf="midClick==true && para!=null && (cexpandat=='madPar' || cexpandat=='midPar' || cexpandat=='masPar' || cexpandat=='misPar')"
+     style="border:none; position:absolute; z-index:1; left:calc(((100vw - 24mm) / 1) - 9.5mm); top:30.75mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="parZboara(); mmmmVizibil=false; para=null">
+    <img src="/assets/img/dreapta.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="misClick==true && para!=null && (cexpandat=='madPar' || cexpandat=='midPar' || cexpandat=='masPar' || cexpandat=='misPar')"
+     style="border:none; position:absolute; z-index:1; right:calc(((100vw - 24mm) / 1) - 9.5mm); top:30.75mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="parZboara(); mmmmVizibil=false; para=null">
+    <img src="/assets/img/stinga.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="madClick==true && para!=null && (cexpandat=='madPar' || cexpandat=='midPar' || cexpandat=='masPar' || cexpandat=='misPar')"
+     style="border:none; position:absolute; z-index:1; right:calc(((100vw - 48mm) / 2) - 9.2mm); bottom:43.6mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="parZboara(); mmmmVizibil=false; para=null">
+    <img src="/assets/img/stinga.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="masClick==true && para!=null && (cexpandat=='madPar' || cexpandat=='midPar' || cexpandat=='masPar' || cexpandat=='misPar')"
+     style="border:none; position:absolute; z-index:1; left:calc(((100vw - 48mm) / 2) - 9.2mm); bottom:43.6mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="parZboara(); mmmmVizibil=false; para=null">
+    <img src="/assets/img/dreapta.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+
+
+<!--nu merge să oglindesc sau rotesc săgeata plină de dreapta asta: &#10148; sau asta: &#10132; așa că folosesc imagine-->
+<div *ngIf="midClick==true && (cooa.nord!=undefined || cooa.est!=undefined) && ((cooa?.nord>=-20037508.3427892 && cooa?.nord<=20037508.3427892)&&(cooa?.est>=-20037508.3427892 && cooa?.est<=20037508.3427892)) && (cexpandat=='madCoo' || cexpandat=='midCoo' || cexpandat=='masCoo' || cexpandat=='misCoo')"
+     style="border:none; position:absolute; z-index:1; left:calc(((100vw - 24mm) / 1) - 9.5mm); top:39.5mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="cooZboara(); mmmmVizibil=false; cooa.nord=undefined; cooa.est=undefined">
+    <img src="/assets/img/dreapta.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="misClick==true && (cooa.nord!=undefined || cooa.est!=undefined) && ((cooa.nord>=-20037508.3427892 && cooa.nord<=20037508.3427892)&&(cooa.est>=-20037508.3427892 && cooa.est<=20037508.3427892)) && (cexpandat=='madCoo' || cexpandat=='midCoo' || cexpandat=='masCoo' || cexpandat=='misCoo')"
+     style="border:none; position:absolute; z-index:1; right:calc(((100vw - 24mm) / 1) - 9.5mm); top:39.5mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="cooZboara(); mmmmVizibil=false; cooa.nord=undefined; cooa.est=undefined">
+    <img src="/assets/img/stinga.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="madClick==true && (cooa.nord!=undefined || cooa.est!=undefined) && ((cooa.nord>=-20037508.3427892 && cooa.nord<=20037508.3427892)&&(cooa.est>=-20037508.3427892 && cooa.est<=20037508.3427892)) && (cexpandat=='madCoo' || cexpandat=='midCoo' || cexpandat=='masCoo' || cexpandat=='misCoo')"
+     style="border:none; position:absolute; z-index:1; right:calc(((100vw - 48mm) / 2) - 9.2mm); bottom:52.35mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="cooZboara(); mmmmVizibil=false; cooa.nord=undefined; cooa.est=undefined">
+    <img src="/assets/img/stinga.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+<div *ngIf="masClick==true && (cooa.nord!=undefined || cooa.est!=undefined) && ((cooa.nord>=-20037508.3427892 && cooa.nord<=20037508.3427892)&&(cooa.est>=-20037508.3427892 && cooa.est<=20037508.3427892)) && (cexpandat=='madCoo' || cexpandat=='midCoo' || cexpandat=='masCoo' || cexpandat=='misCoo')"
+     style="border:none; position:absolute; z-index:1; left:calc(((100vw - 48mm) / 2) - 9.2mm); bottom:52.35mm; background-color:var(--culoare-butoane); border-radius:50%; width:8.5mm; height:8.5mm; box-shadow: 0 0 3mm black;text-align:center; vertical-align:middle; line-height:8mm;"
+     (click)="cooZboara(); mmmmVizibil=false; cooa.nord=undefined; cooa.est=undefined">
+    <img src="/assets/img/dreapta.svg" style="transform: scale(.75) translate(-2.4mm,-2.4mm);">
+</div>
+
+
+<!--
+    &#10; e new line or line break or smth
+    cinci zecimale îs 0.78847m la latitudinea 45 iar rezoluția esri e 0.66m or smth. șase zecimale îs 7.8847cm https://support.oxts.com/hc/en-us/articles/115002885125-Level-of-Resolution-of-Longitude-and-Latitude-Measurements
+    dacă am [(ngModel)] și chestii în input nu merge interpolare sub nicio formă în placeholder
+-->
+
+
+<button *ngIf="sod=='dreptaci'" (click)="clickat('mad'); mmmmVizibil=!mmmmVizibil" class="zbo-mare-dreptaci" style="padding:0;">
+    <img src="/assets/img/cauta.svg">
+</button>
+<div *ngIf="madClick==true && mmmmVizibil==true" style="position:absolute; right:0vw; bottom:24mm; box-shadow: 0 0 3mm black;
+        border-top-left-radius: 12mm; background-color: var(--culoare-pagini); padding:1mm; width: calc((100% - 48mm) / 4);">
+    <small>&nbsp;</small>
+    <input id="madCoo" (click)="onCoo('madCoo')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la coordonate"
+           (keyup)="cooCauta($event)" placeholder="&deg;N&deg;E {{getUzer.limba=='en'?'eg: ':''}}{{getUzer.limba=='hu'?'példa: ':''}}{{getUzer.limba=='ro'?'ex: ':''}}45{{getUzer.limba=='en'?'.':','}}12345 23{{getUzer.limba=='en'?'.':','}}12345" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="ecooInvalid" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"ex: 45,5995641 24,7361706":""}}{{getUzer.limba=='hu'?"példa: 45,5995641 24,7361706":""}}{{getUzer.limba=='en'?"eg: 45,5995641 24,7361706":""}}</small></small>
+    <small *ngIf="ecooAfara" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"asta nu-i în România":""}}{{getUzer.limba=='hu'?"ez nincs Romániában":""}}{{getUzer.limba=='en'?"that's not in Romania":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="madPar" (click)="onPar('madPar')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la parcelă"
+           (keyup)="parCauta($event)" placeholder="parcelă" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="epar" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această parcelă nu există":""}}{{getUzer.limba=='hu'?"ez a csomag nem létezik":""}}{{getUzer.limba=='en'?"inexistent plot":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="madUat" (click)="onUat('madUat')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la UAT"
+           (keyup)="uatCauta($event)" placeholder="UAT" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="euat" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această unitate teritorial administrativă nu există":""}}{{getUzer.limba=='hu'?"ez a közigazgatási területi egység nem létezik":""}}{{getUzer.limba=='en'?"inexistent borough":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="madLoc" (click)="onLoc('madLoc')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la localitate"
+           (keyup)="locCauta($event)" placeholder="localitate" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="eloc" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această localitate nu există":""}}{{getUzer.limba=='hu'?"ez a helység nem létezik":""}}{{getUzer.limba=='en'?"inexistent place":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+</div>
+
+
+<button *ngIf="sod=='dreptaci'" (click)="clickat('mid'); mmmmVizibil=!mmmmVizibil" class="zbo-mic-dreptaci" style="padding:0">
+    <img src="/assets/img/cauta.svg">
+</button>
+<div *ngIf="midClick==true && mmmmVizibil==true" style="position:absolute; left:0vw; top:12mm; box-shadow: 0 0 3mm black;
+        border-bottom-right-radius: 12mm; background-color: var(--culoare-pagini); padding:1mm; width: calc((100% - 24mm) / 2)">
+    <input id="midLoc" (click)="onLoc('midLoc')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la localitate"
+           (keyup)="locCauta($event)" placeholder="localitate" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="eloc"><small>{{getUzer.limba=='ro'?"această parcelă nu există":""}}{{getUzer.limba=='hu'?"ez a csomag nem létezik":""}}{{getUzer.limba=='en'?"inexistent plot":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="midUat" (click)="onUat('midUat')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la UAT"
+           (keyup)="uatCauta($event)" placeholder="UAT" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="euat"><small>{{getUzer.limba=='ro'?"această unitate teritorial administrativă nu există":""}}{{getUzer.limba=='hu'?"ez a közigazgatási területi egység nem létezik":""}}{{getUzer.limba=='en'?"inexistent borough":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="midPar" (click)="onPar('midPar')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la parcelă"
+           (keyup)="parCauta($event)" placeholder="parcelă" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="epar"><small>{{getUzer.limba=='ro'?"această localitate nu există":""}}{{getUzer.limba=='hu'?"ez a helység nem létezik":""}}{{getUzer.limba=='en'?"inexistent place":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="midCoo" (click)="onCoo('midCoo')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la coordonate"
+           (keyup)="cooCauta($event)" placeholder="&deg;N&deg;E {{getUzer.limba=='en'?'eg: ':''}}{{getUzer.limba=='hu'?'példa: ':''}}{{getUzer.limba=='ro'?'ex: ':''}}45{{getUzer.limba=='en'?'.':','}}12345 23{{getUzer.limba=='en'?'.':','}}12345" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="ecooInvalid"><small>{{getUzer.limba=='ro'?"ex: 45,5995641 24,7361706":""}}{{getUzer.limba=='hu'?"példa: 45,5995641 24,7361706":""}}{{getUzer.limba=='en'?"eg: 45,5995641 24,7361706":""}}</small></small>
+    <small *ngIf="ecooAfara"><small>{{getUzer.limba=='ro'?"asta nu-i în România":""}}{{getUzer.limba=='hu'?"ez nincs Romániában":""}}{{getUzer.limba=='en'?"that's not in Romania":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+</div>
+
+
+<button *ngIf="sod=='stingaci'" (click)="clickat('mas'); mmmmVizibil=!mmmmVizibil" class="zbo-mare-stingaci" style="padding:0">
+    <img src="/assets/img/cauta.svg">
+</button>
+<div *ngIf="masClick==true && mmmmVizibil==true" style="position:absolute; left:0vw; bottom:24mm; box-shadow: 0 0 3mm black;
+        border-top-right-radius: 12mm; background-color: var(--culoare-pagini); padding:1mm; width: calc((100% - 48mm) / 4)">
+    <small>&nbsp;</small>
+    <input id="masCoo" (click)="onCoo('masCoo')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la coordonate"
+           (keyup)="cooCauta($event)" placeholder="&deg;N&deg;E {{getUzer.limba=='en'?'eg: ':''}}{{getUzer.limba=='hu'?'példa: ':''}}{{getUzer.limba=='ro'?'ex: ':''}}45{{getUzer.limba=='en'?'.':','}}12345 23{{getUzer.limba=='en'?'.':','}}12345" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="ecooInvalid"><small>{{getUzer.limba=='ro'?"ex: 45,5995641 24,7361706":""}}{{getUzer.limba=='hu'?"példa: 45,5995641 24,7361706":""}}{{getUzer.limba=='en'?"eg: 45,5995641 24,7361706":""}}</small></small>
+    <small *ngIf="ecooAfara"><small>{{getUzer.limba=='ro'?"asta nu-i în România":""}}{{getUzer.limba=='hu'?"ez nincs Romániában":""}}{{getUzer.limba=='en'?"that's not in Romania":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="masPar" (click)="onPar('masPar')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la parcelă"
+           (keyup)="parCauta($event)" placeholder="parcelă" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="epar"><small>{{getUzer.limba=='ro'?"această parcelă nu există":""}}{{getUzer.limba=='hu'?"ez a csomag nem létezik":""}}{{getUzer.limba=='en'?"inexistent plot":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="masUat" (click)="onUat('masUat')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la UAT"
+           (keyup)="uatCauta($event)" placeholder="UAT" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="euat"><small>{{getUzer.limba=='ro'?"această unitate teritorial administrativă nu există":""}}{{getUzer.limba=='hu'?"ez a közigazgatási területi egység nem létezik":""}}{{getUzer.limba=='en'?"inexistent borough":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="masLoc" (click)="onLoc('masLoc')" style="width:calc(((100vw - 48mm) / 4) - 2mm); border-top-right-radius:4mm; border-bottom-right-radius:4mm" alt="buton zboară la localitate"
+           (keyup)="locCauta($event)" placeholder="localitate" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="eloc"><small>{{getUzer.limba=='ro'?"această localitate nu există":""}}{{getUzer.limba=='hu'?"ez a helység nem létezik":""}}{{getUzer.limba=='en'?"inexistent place":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+</div>
+
+
+<button *ngIf="sod=='stingaci'" (click)="clickat('mis'); mmmmVizibil=!mmmmVizibil" class="zbo-mic-stingaci" style="padding:0">
+    <img src="/assets/img/cauta.svg">
+</button>
+<div *ngIf="misClick==true && mmmmVizibil==true" style="position:absolute; right:0vw; top:12mm; box-shadow: 0 0 3mm black;
+        border-bottom-left-radius: 12mm; background-color: var(--culoare-pagini); padding:1mm; width: calc((100% - 24mm) / 2)">
+    <input id="misLoc" (click)="onLoc('misLoc')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la localitate"
+           (keyup)="locCauta($event)" placeholder="localitate" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="eloc" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această localitate nu există":""}}{{getUzer.limba=='hu'?"ez a helység nem létezik":""}}{{getUzer.limba=='en'?"inexistent place":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="misUat" (click)="onUat('misUat')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la UAT"
+           (keyup)="uatCauta($event)" placeholder="UAT" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="euat" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această unitate teritorial administrativă nu există":""}}{{getUzer.limba=='hu'?"ez a közigazgatási területi egység nem létezik":""}}{{getUzer.limba=='en'?"inexistent borough":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="misPar" (click)="onPar('misPar')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la parcelă"
+           (keyup)="parCauta($event)" placeholder="parcelă" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="epar" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"această parcelă nu există":""}}{{getUzer.limba=='hu'?"ez a csomag nem létezik":""}}{{getUzer.limba=='en'?"inexistent plot":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <input id="misCoo" (click)="onCoo('misCoo')" style="width:calc(((100vw - 24mm) / 2) - 2mm); border-top-left-radius:4mm; border-bottom-left-radius:4mm" alt="buton zboară la coordonate"
+           (keyup)="cooCauta($event)" placeholder="&deg;N&deg;E {{getUzer.limba=='en'?'eg: ':''}}{{getUzer.limba=='hu'?'példa: ':''}}{{getUzer.limba=='ro'?'ex: ':''}}45{{getUzer.limba=='en'?'.':','}}12345 23{{getUzer.limba=='en'?'.':','}}12345" />
+    <br style="display:block; content:''; margin-top:1mm;" />
+    <small *ngIf="ecooInvalid" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"ex: 45,5995641 24,7361706":""}}{{getUzer.limba=='hu'?"példa: 45,5995641 24,7361706":""}}{{getUzer.limba=='en'?"eg: 45,5995641 24,7361706":""}}</small></small>
+    <small *ngIf="ecooAfara" style="display:block; text-align:right"><small>{{getUzer.limba=='ro'?"asta nu-i în România":""}}{{getUzer.limba=='hu'?"ez nincs Romániában":""}}{{getUzer.limba=='en'?"that's not in Romania":""}}</small></small>
+    <br style="display:block; content:''; margin-top:1mm;" />
+</div>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="12mm"
+   height="12mm"
+   viewBox="0 0 12 12"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="exit.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="25"
+     inkscape:cy="21"
+     inkscape:window-width="1280"
+     inkscape:window-height="971"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1049"
+       units="mm"
+       spacingx="0.49999999"
+       spacingy="0.49999999"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="color:black;solid-color:black;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       d="M 6,0.75 A 0.25,0.25 0 0 0 5.75,1 V 7 A 0.25,0.25 0 0 0 6,7.25 0.25,0.25 0 0 0 6.25,7 V 1 A 0.25,0.25 0 0 0 6,0.75 Z"
+       id="path4638" />
+    <path
+       id="path1740"
+       style="color:black;solid-color:black;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       d="M 4.7500977 2.4639323 C 3.1215797 3.039154 2.071372 4.679083 2.2753133 6.4337158 C 2.4971457 8.3422756 4.1316387 9.7765693 6.0528605 9.7497925 C 7.9740822 9.7230157 9.5678007 8.2422967 9.7363566 6.3282959 C 9.8882031 4.604037 8.8392139 3.0248945 7.2502035 2.4639323 L 7.2502035 2.9993001 C 8.5360124 3.5327952 9.3647664 4.8481591 9.2381958 6.2854045 C 9.0917648 7.9481683 7.7141461 9.2268194 6.045109 9.2500814 C 4.3760721 9.2733434 2.964121 8.0328417 2.7714071 6.3748047 C 2.6012443 4.9107902 3.4314637 3.5465871 4.7500977 2.9993001 L 4.7500977 2.4639323 z " />
+  </g>
+</svg>

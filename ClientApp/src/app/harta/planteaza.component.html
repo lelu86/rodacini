@@ -1,0 +1,32 @@
+<!-- <app-zharta #zharta></app-zharta> -->
+<!--cruce-buto... nu mai e cruce-->
+<button *ngIf="sod=='dreptaci'" id="aidi-planteaza-mare-sting" class="planteaza-mare-sting" (click)="onApasat()" [routerLink]="['']" style="padding: 0; margin: 0; ">
+    <!--margin zero nu face nimic da mai bine rămîne-->
+    <img *ngIf="roc=='radacina'" id="img-mare-sting" src="/assets/img/radacina-buton-mare-sting.svg" alt="buton vezi harta">
+    <img *ngIf="roc=='cruce'" id="img-mare-sting" src="/assets/img/cruce-buton-mare-sting.svg" alt="buton plantează un copac">
+</button>
+<button *ngIf="sod=='dreptaci'" id="aidi-planteaza-mic-drept" class="planteaza-mic-drept" (click)="onApasat()" [routerLink]="['']" style="padding: 0; margin: 0; ">
+    <img *ngIf="roc=='radacina'" id="img-mic-drept" src="/assets/img/radacina-buton-mic-drept.svg" alt="buton vezi harta">
+    <img *ngIf="roc=='cruce'" id="img-mic-drept" src="/assets/img/cruce-buton-mic-drept.svg" alt="buton plantează un copac">
+</button>
+
+<button *ngIf="sod=='stingaci'" id="aidi-planteaza-mare-drept" class="planteaza-mare-drept" (click)="onApasat()" [routerLink]="['']" style="padding: 0; margin: 0; ">
+    <img *ngIf="roc=='radacina'" id="img-mare-drept" src="/assets/img/radacina-buton-mare-drept.svg" alt="buton vezi harta">
+    <img *ngIf="roc=='cruce'" id="img-mare-drept" src="/assets/img/cruce-buton-mare-drept.svg" alt="buton plantează un copac">
+</button>
+<button *ngIf="sod=='stingaci'" id="aidi-planteaza-mic-sting" class="planteaza-mic-sting" (click)="onApasat()" [routerLink]="['']" style="padding:0; margin:0;">
+    <img *ngIf="roc=='radacina'" id="img-mic-sting" src="/assets/img/radacina-buton-mic-sting.svg" alt="buton vezi harta">
+    <img *ngIf="roc=='cruce'" id="img-mic-sting" src="/assets/img/cruce-buton-mic-sting.svg" alt="buton plantează un copac">
+</button>
+
+
+
+
+
+
+
+
+<!--
+<app-harta></app-harta>
+  -->
+<!--*ngIf="plantat==='plantat'"-->
